@@ -23,7 +23,7 @@
 
 ## 操作符和控制流程 <a href="#control-process" id="control-process"></a>
 
-* [Page](control-process/page.md)
+* [什么是方法](control-process/shen-me-shi-fang-fa.md)
 
 ## 附录 <a href="#addition" id="addition"></a>
 
