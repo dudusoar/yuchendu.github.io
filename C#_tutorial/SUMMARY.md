@@ -21,12 +21,15 @@
 * [元组](yuan-zu.md)
 * [数组](shu-zu.md)
 
-## 操作符和控制流程 <a href="#control-process" id="control-process"></a>
-
-* [什么是方法](control-process/shen-me-shi-fang-fa.md)
-
 ## 附录 <a href="#addition" id="addition"></a>
 
 * [设计规范](addition/she-ji-gui-fan.md)
 * [注意事项](addition/reminders.md)
 * [术语表](addition/term-list.md)
+
+## 方法和参数
+
+* [5.1 方法的调用](fang-fa-he-can-shu/5.1-fang-fa-de-diao-yong/README.md)
+  * [参数](fang-fa-he-can-shu/5.1-fang-fa-de-diao-yong/can-shu.md)
+  * [命名空间](fang-fa-he-can-shu/5.1-fang-fa-de-diao-yong/ming-ming-kong-jian.md)
+* [5.2 方法的声明](fang-fa-he-can-shu/5.2-fang-fa-de-sheng-ming.md)
