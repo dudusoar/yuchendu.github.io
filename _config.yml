@@ -18,6 +18,33 @@ social:
   linkedin: yourprofile
   email: your.email@example.com
 
+# 网站配置
+site_config:
+  background_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  primary_color: "#4fd1c7"
+  
+# 技能标签
+skills:
+  - JavaScript
+  - TypeScript  
+  - React
+  - Vue.js
+  - Node.js
+  - Python
+  - MongoDB
+  - PostgreSQL
+  - Docker
+  - AWS
+  - Git
+  - Linux
+
+# 统计数据
+stats:
+  projects: "50+"
+  experience: "3"
+  technologies: "15+"
+  code_lines: "100K+"
+
 # 构建设置
 theme: minima
 plugins:
@@ -28,7 +55,6 @@ plugins:
 # 包含的目录
 include:
   - assets
-  - config.js
 
 # 排除的文件
 exclude:

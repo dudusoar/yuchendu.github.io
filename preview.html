@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jekyll迁移预览 - 你的个人网站</title>
-    <script src="config.js"></script>
     <link rel="stylesheet" href="assets/css/main.css">
     
     <style>
@@ -244,22 +243,8 @@
         // 页面加载完成后创建粒子
         window.addEventListener('load', createParticles);
         
-        // 更新个人信息
-        function updatePersonalInfo() {
-            if (typeof CONFIG !== 'undefined') {
-                const userName = document.getElementById('userName');
-                const userTitle = document.getElementById('userTitle');
-                const userSubtitle = document.getElementById('userSubtitle');
-                const userDescription = document.getElementById('userDescription');
-                
-                if (userName) userName.textContent = CONFIG.name || '你的名字';
-                if (userTitle) userTitle.textContent = CONFIG.title || '全栈开发者';
-                if (userSubtitle) userSubtitle.textContent = CONFIG.subtitle || '技术爱好者 | 终身学习者';
-                if (userDescription) userDescription.textContent = CONFIG.description || '欢迎来到我的数字世界';
-            }
-        }
-        
-        window.addEventListener('load', updatePersonalInfo);
+        // 预览版使用静态信息
+        console.log('预览版加载完成');
         
         // 页面导航功能
         function showPage(page) {

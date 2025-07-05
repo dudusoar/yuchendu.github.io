@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
-    <script src="config.js"></script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     
     <!-- 页面特定样式 -->
@@ -47,24 +46,8 @@
     
     <!-- 公共脚本 -->
     <script>
-        // 加载配置信息
-        function loadConfig() {
-            if (typeof CONFIG !== 'undefined') {
-                // 更新页面标题
-                if (CONFIG.name) {
-                    document.title = `{{ page.title | default: site.title }} - ${CONFIG.name}`;
-                }
-                
-                // 更新背景图片
-                const background = document.querySelector('.background');
-                if (background && CONFIG.background) {
-                    background.style.background = `linear-gradient(135deg, rgba(26, 29, 41, ${CONFIG.background.overlayOpacity || 0.9}), rgba(45, 55, 72, 0.7)), url('${CONFIG.background.image}') center/cover`;
-                }
-            }
-        }
-        
-        // 页面加载完成后执行配置加载
-        window.addEventListener('load', loadConfig);
+        // Jekyll配置已内置到页面中，无需额外JavaScript配置
+        console.log('Jekyll配置加载完成');
     </script>
 </body>
 </html> 

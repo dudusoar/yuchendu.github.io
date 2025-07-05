@@ -148,22 +148,8 @@ custom_js: |
   // 页面加载完成后创建粒子
   window.addEventListener('load', createParticles);
   
-  // 更新个人信息
-  function updatePersonalInfo() {
-      if (typeof CONFIG !== 'undefined') {
-          const userName = document.getElementById('userName');
-          const userTitle = document.getElementById('userTitle');
-          const userSubtitle = document.getElementById('userSubtitle');
-          const userDescription = document.getElementById('userDescription');
-          
-          if (userName) userName.textContent = CONFIG.name || '{{ site.author.name }}';
-          if (userTitle) userTitle.textContent = CONFIG.title || '{{ site.author.title }}';
-          if (userSubtitle) userSubtitle.textContent = CONFIG.subtitle || '{{ site.author.subtitle }}';
-          if (userDescription) userDescription.textContent = CONFIG.description || '{{ site.description }}';
-      }
-  }
-  
-  window.addEventListener('load', updatePersonalInfo);
+  // 个人信息已通过Jekyll模板直接渲染，无需JavaScript更新
+  console.log('个人信息已加载：{{ site.author.name }}');
 ---
 
 <!-- 粒子效果 -->
