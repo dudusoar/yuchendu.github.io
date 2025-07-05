@@ -1,5 +1,5 @@
-title: 你的个人网站
-email: your-email@example.com
+title: Yuchen Du 的个人网站
+email: yuchendu@example.com
 description: >- 
   欢迎来到我的数字世界 - 全栈开发者的技术分享和创意作品展示
 baseurl: ""
@@ -7,16 +7,16 @@ url: "https://yuchendu.github.io"
 
 # 个人信息
 author:
-  name: 你的名字
+  name: Yuchen Du
   title: 全栈开发者
   subtitle: 技术爱好者 | 终身学习者
   
 # 社交媒体
 social:
-  github: yourusername
-  twitter: yourusername
-  linkedin: yourprofile
-  email: your.email@example.com
+  github: yuchendu
+  twitter: yuchendu
+  linkedin: yuchendu
+  email: yuchendu@example.com
 
 # 网站配置
 site_config:
