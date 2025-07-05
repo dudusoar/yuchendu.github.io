@@ -2,8 +2,8 @@ title: Yuchen Du 的个人网站
 email: yuchendu@example.com
 description: >- 
   欢迎来到我的数字世界 - 全栈开发者的技术分享和创意作品展示
-baseurl: ""
-url: "https://yuchendu.github.io"
+baseurl: "/yuchendu.github.io"
+url: "https://dudusoar.github.io"
 
 # 个人信息
 author:
