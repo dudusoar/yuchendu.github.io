@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    <!-- 页面特定样式 -->
+    {% if page.custom_css %}
+    <style>
+        {{ page.custom_css }}
+    </style>
+    {% endif %}
+</head>
+<body>
+    <div class="background"></div>
+    
+    <!-- 科幻装饰 -->
+    <div class="sci-fi-decoration decoration-1"></div>
+    <div class="sci-fi-decoration decoration-2"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ '/' | relative_url }}" class="logo">🚀 {{ site.title | default: "你的网站" }}</a>
+            <ul class="nav-links">
+                <li><a href="{{ '/' | relative_url }}">首页</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">博客</a></li>
+                <li><a href="{{ '/projects/' | relative_url }}">项目</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">关于</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <!-- 页面特定脚本 -->
+    {% if page.custom_js %}
+        <script>{{ page.custom_js }}</script>
+    {% endif %}
+    
+    <!-- 公共脚本 -->
+    <script>
+        // 加载配置信息
+        function loadConfig() {
+            if (typeof CONFIG !== 'undefined') {
+                // 更新页面标题
+                if (CONFIG.name) {
+                    document.title = `{{ page.title | default: site.title }} - ${CONFIG.name}`;
+                }
+                
+                // 更新背景图片
+                const background = document.querySelector('.background');
+                if (background && CONFIG.background) {
+                    background.style.background = `linear-gradient(135deg, rgba(26, 29, 41, ${CONFIG.background.overlayOpacity || 0.9}), rgba(45, 55, 72, 0.7)), url('${CONFIG.background.image}') center/cover`;
+                }
+            }
+        }
+        
+        // 页面加载完成后执行配置加载
+        window.addEventListener('load', loadConfig);
+    </script>
+</body>
+</html> 
